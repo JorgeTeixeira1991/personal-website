@@ -4,27 +4,48 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="style-home.css" />
-    <link rel="shortcut icon" href="resources/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="resources/favicon_io/favicon.ico" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/d924d5c238.js" crossorigin="anonymous"></script>
+    <link
+      rel="shortcut icon"
+      href="resources/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="icon"
+      href="resources/favicon_io/favicon.ico"
+      type="image/x-icon"
+    />
+    <script
+      src="https://kit.fontawesome.com/d924d5c238.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="index.js"></script>
     <title>A Junior Dev</title>
   </head>
   <body>
-    <nav class="nav-bar">
+    <nav class="title-custom">
       <div class="logo-title">
         <div class="headers">
           <h1>Jorge Teixeira</h1>
-          <br>
-          <h3>Junior Dev 
-            <i class="fa-solid fa-seedling"></i>
+          <br />
+          <h3>
+            Junior Dev
+            <i class="fa-solid fa-seedling fa-bounce"></i>
           </h3>
-          </div>
-       
+        </div>
+      </div>
     </nav>
     <div class="about">
-      <a href="#"><button>About me</button></a>
+      <button class="popup" onclick="aboutMePopUp()">
+        About me<span class="popuptext" id="myPopup">Popup text...</span>
+      </button>
     </div>
     <div class="about">
       <a href="#"><button>Projects</button></a>
@@ -32,34 +53,41 @@
     <div class="about">
       <a href="#"><button>Notes</button></a>
     </div>
-  
-    <div style="width: 20% ; height: 100vh; position: absolute;">
+
+    <div style="width: 20%; height: 100vh; position: absolute">
       <div class="bg-left"></div>
       <div class="bg-left bg2"></div>
       <div class="bg-left bg3"></div>
     </div>
 
-    <div style="width: 20% ; height: 100vh; position: absolute; align-self: flex-end;">
+    <div
+      style="
+        width: 20%;
+        height: 100vh;
+        position: absolute;
+        align-self: flex-end;
+      "
+    >
       <div class="bg-right"></div>
       <div class="bg-right bg2"></div>
       <div class="bg-right bg3"></div>
     </div>
-    <br><br><br><br>
-    <div style="align-self: center;">
+    <br /><br /><br /><br />
+    <div class="contacts-container">
       <ul>
-      <li>
-        <a href=""><i class="fa fa-github"></i></a>
-      </li>
-      <li>
-        <a href=""><i class="fa fa-linkedin"></i></a>
-      </li>
-      <li>
-        <a href=""> <i class="fa fa-google"></i></a>
-      </li>
-      <li>
-        <a href=""> <i class="fa fa-mobile-android"></i></a>
-      </li>
-    </ul>
+        <li>
+          <a href=""><i class="fa fa-github"></i></a>
+        </li>
+        <li>
+          <a href=""><i class="fa fa-linkedin"></i></a>
+        </li>
+        <li>
+          <a href=""> <i class="fa fa-google"></i></a>
+        </li>
+        <li>
+          <a href=""> <i class="fa fa-whatsapp"></i></a>
+        </li>
+      </ul>
     </div>
   </body>
 </html>

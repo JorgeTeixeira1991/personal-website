@@ -1,61 +1,127 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo&family=Roboto+Mono&display=swap');
 
 body{
-    background-color: black;
-    display: flex;
+    background-color: rgb(14, 19, 27);
     margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 ul {
     list-style-type: none;
 }
 h1{
-  margin: 0;
-  padding-right: 5%;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 10px;
   flex-shrink: 0;
+  color: #687bad;
 }
 h3{
+  text-align: center;
   padding: 0;
   margin: 0;
   flex-shrink: 0;
+  color: #687bad;
+}
+
+.bg-left {
+  animation:slide-left 3s infinite alternate;
+  background-image: linear-gradient( -60deg, rgba(106, 126, 192, 0.918) 50%, rgb(31, 45, 58) 50%);
+  margin-left: -10%;
+  opacity:.5;
+  position:fixed;
+  width: 30%;
+  height: 100%;
+  left: 0;
+  z-index:-1;
+}
+
+.bg-right {
+  animation:slide 3s infinite alternate;
+  background-image: linear-gradient( -60deg, rgba(106, 126, 192, 0.918) 50%, rgb(31, 45, 58) 50%);
+  opacity:.5;
+  position:fixed;
+  width: 30%;
+  height: 100%;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction: alternate-reverse;
+  animation-duration: 6s;
+  background-image: linear-gradient( -120deg, rgba(106, 126, 192, 0.918) 50%, rgb(31, 45, 58) 50%);
+}
+
+.bg3 {
+  animation-direction:alternate-reverse;
+  background-image: linear-gradient( -230deg, rgba(106, 126, 192, 0.918) 50%, rgb(31, 45, 58) 50%);
+  animation-duration: 4s;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(25%);
+  }
+  100% {
+    transform:translateX(-25%);
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
 }
 
 
-.nav-bar{
-    padding-bottom: 10px;
-    padding-right: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: baseline;
-    background: linear-gradient(to bottom, rgba(31, 45, 58, 0.5) , transparent);
-    width: 100%;
-    height: fit-content;
-}
-.nav-bar img{
-    width: 100px;
-    height: auto;
-    padding-right: 10%;
-    padding-left: 1%;
-}
-.nav-bar-ele{
-  font-family: 'Arvo', serif;
-  color: floralwhite;
-  margin: 5px 0 0 50px;
-}
-.logo-title{
-  flex-wrap: wrap;
-  align-self: center  ;
-  font-family: 'Arvo', serif;
-  display: flex;
+.nav-bar{ 
+  padding-bottom: 10px;
   flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  background: linear-gradient(to bottom, rgba(33, 48, 62, 0.763) , transparent);
+  justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 100%;
+  height: fit-content;
+}
+
+.icon{
+  padding-left: 20px;
+  margin-top: 5px;
+}
+
+.headers{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.logo-title{
+  align-items: center;
+  justify-content: center;
+  display: flex;  
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-family: 'Arvo', serif;
+  width: 50vw;
   height: fit-content;
   color: #fff;
 }
 
-
+.about{
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 
 button {
   margin-top: 10px;
@@ -63,7 +129,7 @@ button {
     --s: .25em; /* size of the corner */
     --c: #687bad;
     border: none;
-    font-size: large;
+    font-size: 50px;
     font-family: 'Arvo', serif;
     
     padding: calc(.5em + var(--s)) calc(.5em + var(--s));

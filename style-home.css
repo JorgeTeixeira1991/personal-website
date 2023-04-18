@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo&family=Roboto+Mono&display=swap');
 
 body{
-    background-color: black;
-    display: flex;
+    background-color: rgb(19, 27, 34);
     margin: 0;
 }
 
@@ -11,7 +10,8 @@ ul {
 }
 h1{
   margin: 0;
-  padding-right: 5%;
+  padding-right: 3%;
+  font-size: 30px;
   flex-shrink: 0;
 }
 h3{
@@ -23,20 +23,27 @@ h3{
 
 .nav-bar{
     padding-bottom: 10px;
-    padding-right: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: baseline;
-    background: linear-gradient(to bottom, rgba(31, 45, 58, 0.5) , transparent);
+    background: linear-gradient(to bottom, rgba(47, 68, 88, 0.527) , transparent);
     width: 100%;
     height: fit-content;
 }
+
 .nav-bar img{
-    width: 100px;
-    height: auto;
-    padding-right: 10%;
-    padding-left: 1%;
+  width: 100px;
+  height: auto;
+  padding-right: 5%;
+}
+.nav-bar-list{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 30%;
+  height: fit-content;
 }
 .nav-bar-ele{
   font-family: 'Arvo', serif;
@@ -44,6 +51,7 @@ h3{
   margin: 5px 0 0 50px;
 }
 .logo-title{
+  margin-left: -5%;
   flex-wrap: wrap;
   align-self: center  ;
   font-family: 'Arvo', serif;
@@ -55,6 +63,35 @@ h3{
   color: #fff;
 }
 
+
+.intro-block{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 30vh;
+  background: transparent;
+}
+
+.type {
+  display:inline-flex;
+}
+.type span {
+  word-break: break-all;
+  font-family:'Arvo', serif;
+  font-weight: bold;
+  font-size: 30px;
+  height: 1.2em;
+  width:0%;
+  overflow: hidden;
+  animation:t 11s linear infinite ;
+}
+.type span:before {
+  content:" ";
+  display:inline-block;
+}
+@keyframes t{
+  90%,100% {width:100%}
+}
 
 
 button {

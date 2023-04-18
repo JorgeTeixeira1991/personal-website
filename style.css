@@ -127,20 +127,20 @@
   
   
   .blinking-text {
-    animation: blink 3.5s ease-in-out infinite;
+    animation: blink 4.5s ease-in-out infinite;
   }
 
   .blinking-text-2 {
-    animation: blink2 2.5s ease-in-out infinite;
+    animation: blink2 3.5s ease-in-out infinite;
   }
   .blinking-text-3 {
-    animation: blink3 2s ease-in-out infinite;
+    animation: blink3 2.5s ease-in-out infinite;
   }
   .blinking-text-4 {
-    animation: blink4 2.5s ease-in-out infinite;
+    animation: blink4 3s ease-in-out infinite;
   }
   .blinking-text-5 {
-    animation: blink5 4.5s ease-in-out infinite;
+    animation: blink5 1s ease-in-out infinite;
   }
   
   

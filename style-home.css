@@ -6,17 +6,18 @@ body{
     padding: 0;
     display: flex;
     flex-direction: column;
+    animation: 1s introTransition linear;
 }
 
 h1{
+  display: flex;
   font-family: 'Arvo', serif  ;
   margin: 0;
   border: none;
   text-align: center;
+  flex-wrap: wrap;
   font-size: 40px;
-  flex-shrink: 0;
   padding: 5px;
-  background: transparent;
 }
 h3{
   text-align: center;
@@ -24,6 +25,18 @@ h3{
   flex-shrink: 0;
   color: #7395e9;
   margin: 1rem 0 0 0;
+}
+
+.circle{
+  position: absolute;
+  background-color: rgba(47, 149, 233, 0.17) ;
+  border-radius: 50%;
+  width: 50vw;
+  align-self: center;
+  height:50vw;
+  filter: blur(500px);
+  opacity: 0.5;
+  z-index: -1;
 }
 
 .bg-left {
@@ -373,6 +386,16 @@ button {
     color: rgb(62, 96, 206);
     font-size: 36px;
     text-shadow: 0 0 10px rgb(42, 66, 146), 0 0 20px rgb(40, 63, 138), 0 0 30px rgb(40, 63, 138), 0 0 40px rgb(40, 63, 138), 0 0 50px rgb(40, 63, 138) ;    
+  }
+
+  @keyframes introTransition {
+
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
   }
   
   

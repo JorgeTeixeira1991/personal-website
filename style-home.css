@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo&family=Roboto+Mono&display=swap');
+html{
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
 
 body{
     background-color: rgb(14, 19, 27);
@@ -6,7 +12,7 @@ body{
     padding: 0;
     display: flex;
     flex-direction: column;
-    animation: 1s introTransition linear;
+    animation: 1s introTransition ease-in;
 }
 
 h1{
@@ -23,7 +29,7 @@ h3{
   text-align: center;
   padding: 0;
   flex-shrink: 0;
-  color: #7395e9;
+  color: rgba(106, 126, 192, 0.918);
   margin: 1rem 0 0 0;
 }
 
@@ -173,7 +179,7 @@ button {
   margin-top: 10px;
     --b: 3px;   /* border thickness */
     --s: .25em; /* size of the corner */
-    --c: #7395e9;
+    --c: rgba(106, 126, 192, 0.918);
     border: none;
     font-size: 50px;
     font-family: 'Arvo', serif;
@@ -382,16 +388,16 @@ button {
     from {opacity: 0;}
     to {opacity:1 ;}
   }
-  .neon-text {
-    color: rgb(62, 96, 206);
+  .h1-text {
+    color: rgb(132, 151, 216);
     font-size: 36px;
-    text-shadow: 0 0 10px rgb(42, 66, 146), 0 0 20px rgb(40, 63, 138), 0 0 30px rgb(40, 63, 138), 0 0 40px rgb(40, 63, 138), 0 0 50px rgb(40, 63, 138) ;    
   }
 
   @keyframes introTransition {
 
     from{
       opacity: 0;
+      background: black;
     }
     to{
       opacity: 1;

@@ -62,17 +62,22 @@
       </div>
     </nav>
     <div class="about">
-      <button class="popup" onclick="aboutMePopUp()">
-        About me<span class="popuptext" id="myPopup">Popup text...</span>
+      <button id="myBtn" >
+        About me
       </button>
     </div>
     <div class="about">
-      <a href="#"><button>Projects</button></a>
+      <button id="projects-btn">
+        Projects
+      </button>
     </div>
     <div class="about">
-      <a href="#"><button>Notes</button></a>
+      <button id="notes-btn">
+        Notes
+      </button>
     </div>
 
+   
     <div style="width: 20%; height: 100vh; position: absolute">
       <div class="bg-left"></div>
       <div class="bg-left bg2"></div>
@@ -104,12 +109,36 @@
           ></a>
         </li>
         <li>
-          <a href=""> <i class="fa fa-google"></i></a>
+          <a href="mailto:jorge555444@gmail.com" target="_blank"> <i class="fa fa-google"></i></a>
         </li>
         <li>
           <a href=""> <i class="fa fa-whatsapp"></i></a>
         </li>
       </ul>
     </div>
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Some text in the Modal..</p>
+      </div>
+    </div>
+
+    <div id="projects-modal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Some text in the Modal..</p>
+      </div>
+    </div>
+
+    <div id="notes-modal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Some text in the Modal..</p>
+      </div>
+    </div>
+
   </body>
 </html>

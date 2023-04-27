@@ -548,5 +548,9 @@ button:hover{
   #typedtext{
     font-size: 20px;
   }
+
+  ul{
+    margin-bottom: 40%;
+  }
   }
   

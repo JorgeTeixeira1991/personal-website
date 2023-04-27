@@ -485,12 +485,27 @@ button:hover{
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(2, 50%);
-  grid-template-rows: repeat(2, 50%);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "comp1 comp2"
+                        "comp3 comp4";
   justify-items: center;
   padding: 20px;
   }
 
+  .comp1 {
+    grid-area: comp1;
+  }
+  
+  .comp2 {
+    grid-area: comp2;
+  }
+  .comp3 {
+    grid-area: comp3;
+  }
+  .comp4 {
+    grid-area: comp4;
+  }
   
 
 .card {
@@ -548,6 +563,17 @@ button:hover{
   #typedtext{
     font-size: 20px;
   }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-areas: "comp1 ""comp2"
+                          "comp3""comp4";
+    justify-items: center;
+    grid-gap: 30px;
+    padding: 20px;
+    }
 
   ul{
     margin-bottom: 40%;

@@ -426,19 +426,16 @@ button:hover{
   height: 100vh; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background: transparent;
-  animation: fade 0.7s linear;
+  animation: fade 0.8s linear;
   backdrop-filter: blur(10px) brightness(90%);
 }
 
 @keyframes fade{
   from {
     opacity: 0;
-    height: 0;
-    transform: translateY(-15%);
   }
     to{
     opacity: 1;
-    transform: translateY(0);
     }
   }
   

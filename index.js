@@ -1,5 +1,6 @@
 
 
+
 document.addEventListener("DOMContentLoaded", function() {
   var about = showAboutModal();
   var projects = showProjectsModal();
@@ -11,6 +12,42 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 })
+
+async function loadAndDisplayPosts() {
+  try {
+      // Fetch the text file
+      let response = await fetch('resources/logs.txt');
+      let data = await response.text();
+
+      // Split the text into posts using '__!__' as a delimiter
+      let posts = data.split('__!__').filter(Boolean);
+
+      // Get the posts container
+      let postsContainer = document.getElementById('postsContainer');
+
+      // Loop through each post
+      posts.forEach(post => {
+          // Create a div for the post
+          let postDiv = document.createElement('div');
+          let icon = document.createElement('i');
+          
+          postDiv.className = 'post';
+          
+          // Insert the post text into the div
+          postDiv.innerHTML = post.trim();  // Use innerHTML instead of innerText
+          postDiv.style.marginTop = '10px';
+          postDiv.style.marginBottom = '50px';
+          icon.className ='nf nf-md-lightbulb';
+
+          // Append the post div to the posts container
+          postsContainer.appendChild(icon);
+          postsContainer.appendChild(postDiv);
+          
+      });
+  } catch (error) {
+      console.error('Error fetching or processing the text file:', error);
+  }
+}
 
 
 
@@ -131,3 +168,6 @@ function closeModalOnBackgroundClick(modal1, modal2, modal3) {
     }
     
     
+
+// Call the function when the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', loadAndDisplayPosts);

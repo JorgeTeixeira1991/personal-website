@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Arvo&family=Roboto+Mono&display=swap");
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+
+
 html {
   width: 100%;
   height: 100%;
@@ -16,6 +19,7 @@ body {
   height: 100vh;
   width: 100vw;
   position: fixed;
+  
 }
 
 h1 {
@@ -55,15 +59,18 @@ button:hover{
 
 .circle {
   position: absolute;
-  background-color: rgba(47, 149, 233, 0.17);
+  background-color: rgba(55, 95, 168, 0.884);
   border-radius: 50%;
-  width: 50vw;
-  align-self: center;
-  height: 50vw;
-  filter: blur(500px);
-  opacity: 0.5;
+  width: 1000px;  /* Adjusted value */
+  height: 1000px; /* Adjusted value */
+  min-width: 50px;
+  min-height: 50px;
+  align-self:center;
+  filter: blur(150px);
+  opacity: 0.3;
   z-index: -1;
 }
+
 
 .bg-left {
   animation: slide-left 3s infinite alternate;
@@ -455,14 +462,24 @@ button:hover{
   color: rgb(82, 110, 163);
   overflow:scroll;
 }
-
+.modal-content::-webkit-scrollbar {
+  display: none;
+}
+.modal-content {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 .modal-content ul{
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   flex-wrap: wrap;
 }
+#postsContainer{
+  font-size: large;
+  font-weight: bold;
   
+}
 /* The Close Button */
 .close {
   align-self: start;
